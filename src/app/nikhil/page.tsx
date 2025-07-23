@@ -9,7 +9,7 @@ const page = () => {
       {/* Banner Section */}
       <section className='bg-bgcream container pt-[64px] pb-[146px] md:pt-[100px] lg:pt-[191px] lg:pb-[233px] '>
         <div className='flex items-start justify-between gap-15 lg:gap-2 flex-col lg:flex-row'>
-          <div className='w-full max-w-full lg:max-w-[662px]'>
+          <div className='w-full max-w-full lg:max-w-[662px]'> 
             <h1 className='inline uppercase tracking-[-1%] leading-[45px] md:leading-[95px] text-[45px] md:text-[115px] font-medium font-firaSans-condensed text-brown'>Reach out to us anytime</h1>
             <div className='inline'>
               <span className='inline-block w-full max-w-[14px] h-[14px] md:max-w-[27px] md:h-[27px] bg-lightgray2 ml-3 mr-[11px] md:mr-[19px]'></span>
