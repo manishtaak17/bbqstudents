@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-firaSans: var(--font-fira-sans);
+  --font-firaSans-condensed: var(--font-fira-sans-condensed);
+  --font-lato: var(--font-lato);
+  --color-darkpink: #A53349;
+  --color-darkpink2: #AF364E;
+  --color-brown: #683239;
+  --color-darkgray: #5B3840;
+  --color-brownpink: #9C3A50;
+  --color-black: #000000;
+  --color-browndark: #522D34;
+  --color-bgcream: #FFF6E2;
+  --color-pink: #E699AB;
+  --color-bgbrown: #5D3740;
+  --color-white: #FFFFFF;
+  --color-bgdarkbrown: #47222B;
+  --color-gray1: #B6B6B6;
+  --color-darkcream: #DED0C2;
+  --color-gray2: #E9E4D6;
+  --color-gray3: #252525;
+  --color-lightgray: #8D8D8D;
+  --color-lightgray2: #E6DDC8;
+  --color-darkcream: #EAD9BF;
+  --color-lightcream: #F4EAD4;
+  --color-lightcream2: #F1E2CA;
+  --color-redbrown: #B45369;
+  --color-whitecream: #FFF9ED;
+  --color-gray4: #B2B0AB;
+  --color-gray5: #BAB9A4;
+  --color-gray6: #B1B1B1;
+  --color-lightblack: #1E1E1E;
+
+}
+
+.container {
+  @apply max-w-[1342px] w-full px-[30px] md:px-5 mx-auto
+}
+
+.footeranimation {
+  @apply transition-all duration-300 ease-in-out hover:underline hover:text-darkpink;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes dotPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.animate-dotPulse {
+  animation: dotPulse 7s ease-in-out infinite;
+}
+
+.delay-200 {
+  animation-delay: 0.05s;
+}
+
+.delay-400 {
+  animation-delay: 0.1s;
+}
+
+.delay-500 {
+  animation-delay: 0.2s;
+}
+
+
+
+
+
+
+@keyframes subtle-float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtle-float 3s ease-in-out infinite;
+}
+
+/* Custom pulse animation for dots */
+@keyframes dot-pulse {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
