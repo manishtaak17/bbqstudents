@@ -84,7 +84,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
         >
             {/* Modal Body */}
             <div
-                className={`pt-[119px] md:pt-[99px] pb-[190px] px-[20px] md:px-[77px] relative w-full max-w-[1200px] max-h-[90vh] bg-bgcream rounded-t-[20px] shadow-2xl overflow-hidden transition-all duration-300 ${isClosing ? 'animate-scaleOut' : 'animate-scaleIn'
+                className={`pt-[119px] md:pt-[99px] pb-[190px] px-[20px] md:px-[77px] relative w-full max-w-[1200px] max-h-[100vh] bg-bgcream rounded-t-[20px] shadow-2xl overflow-hidden transition-all duration-300 ${isClosing ? 'animate-scaleOut' : 'animate-scaleIn'
                     }`}
             >
                 <button
@@ -94,7 +94,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
                     <Image src="/images/close.png" alt="clock" width={24} height={24} />
                 </button>
 
-                <div className="overflow-y-auto max-h-[90vh] custom-scrollbar">
+                <div className="overflow-y-auto max-h-[90vh] hide-scrollbar ">
                     {/* Modal Content */}
                     <div className="">
                         <h2 className="uppercase md:capitalize w-full md:max-w-[810px] tracking-[0%] md:tracking-[-0.6px] leading-[45px] md:leading-[56px] text-[45px] md:text-[54px] font-medium font-firaSans-condensed text-brown">1st Indian full service CDR brand with ₹1000+ Crore annual revenues</h2>
@@ -138,7 +138,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
                                 <Image src="/images/new-toscano.jpg" alt="toscano-image" width={761} height={420} className="rounded-[0px] md:rounded-[10px] object-cover" />
                                 <h5 className="mt-[31px] md:mt-[60px] lg:mt-[112px] tracking-[0%] md:tracking-[-1.2px] leading-[120%] md:leading-[170%] text-[22px] md:text-[30px] font-medium font-montserrat text-black">BBQ & Toscano</h5>
                                 <h5 className="pt-[20px] pb-[60px] md:pt-[46px] md:pb-[80px] leading-[150%] md:leading-[130%] text-[18px] md:text-[24px] font-normal font-firaSans-condensed text-gray10">We bring together a family of food experiences designed to spark connection, celebrate flavor, and make every meal feel meaningful, no matter where you are.We bring together a family of food experiences designed to spark connection, celebrate flavor, and make every meal feel meaningful, no matter where you are.We bring together a family of food experiences designed to spark connection, celebrate flavor, and make every meal feel meaningful, no matter where you are.</h5>
-                                <div className="border-y-[2px] border-[#979797] py-[30px] md:py-[37px] pl-[25px] md:pl-[60px]">
+                                <div className="border-y-[2px] border-[#979797]/20 py-[30px] md:py-[37px] pl-[25px] md:pl-[60px]">
                                     <h5 className="w-full max-w-[300px] md:max-w-[350px] tracking-[-1.2px] leading-[160%] md:leading-[150%] text-[18px] md:text-[30px] font-medium font-montserrat text-black">“Flexibility adapting to every challenge”</h5>
                                     <h5 className=" tracking-[-0.6px] md:tracking-[-1.2px] pt-[26px] md:pt-[12px] leading-[160%] md:leading-[170%] text-[14px] md:text-[21px] font-medium font-montserrat text-gray9 ">- Rahul Agrawal</h5>
                                 </div>
@@ -213,6 +213,13 @@ const CustomModal: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
                 }
                 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
                     background: #a8a8a8;
+                }
+                .hide-scrollbar {
+                    scrollbar-width: none; 
+                    -ms-overflow-style: none; 
+                }
+                .hide-scrollbar::-webkit-scrollbar {
+                    display: none; 
                 }
             `}</style>
             </div>
