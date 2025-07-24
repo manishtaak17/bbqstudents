@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link';
 import BrandsSection from './components/BrandsSection';
 import EsgSection from './components/EsgSection';
+import SustainabilitySection from './components/SustainabilitySection';
 
 const page = () => {
   return (
@@ -49,26 +50,22 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className='container pt-[33px] pb-[20px] md:pt-[200px] lg:pb-[120px]'>
-        <div className='flex align-top justify-between gap-[49px]'>
-          <div className='w-full max-w-[389px]'>
-            <h2 className='leading-[31px] md:leading-[46px] lg:leading-[56px] text-[26px] md:text-[36px] lg:text-[46px] font-semibold font-firaSans-condensed text-brown  md:mt-[114px]'>We operate under a clearly defined four-pillar framework:</h2>
-          </div>
-          <div className='w-full max-w-[864px]'>
-            <div className='flex items-center justify-start gap-[19px] w-full mb-[21px] lg:mb-[0px]'>
-              <span className='inline-block size-3 bg-darkpink '></span>
-              <h4 className='uppercase tracking-[-1%] leading-[50px] italic text-[24px] lg:text-[30px] font-semibold font-firaSans-condensed text-darkpink'>Sustainability Framework</h4>
+      <SustainabilitySection/>
+
+
+      <section className='container pt-[118px] pb-[124px] md:pt-[200px] lg:pb-[200px]'>
+            <div className='flex align-top justify-between gap-[0px] lg:gap-[49px] flex-col md:flex-row'>
+                <div className='w-full  max-w-[160px]'>
+                    <div className='flex items-center justify-start gap-[19px] w-full '>
+                        <span className='inline-block size-3 bg-darkpink '></span>
+                        <h4 className='uppercase tracking-[-1%] leading-[50px] italic text-[24px] lg:text-[30px] font-semibold font-firaSans-condensed text-darkpink'>Our goal</h4>
+                    </div>
+                </div>
+                <div className='w-full max-w-[864px]'>
+                    <h2 className='tracking-[-0.6px] md:tracking-[0px] leading-[40px] md:leading-[50px] lg:leading-[75px] text-[26px] md:text-[36px] lg:text-[50px] font-normal font-firaSans-condensed text-brown  '>At Barbeque Nation, ESG isn’t a separate agenda — it’s the guiding force that drives us. From sustainable sourcing to inclusive hiring, and from ethical governance to community upliftment, we believe in creating long-term value that goes beyond profit.</h2>
+                </div>
             </div>
-            <ul className='mt-[74px] mb-[56px] leading-[23px] md:leading-[75px] text-[18px] md:text-[25px] lg:text-[50px] font-normal font-firaSans-condensed text-brown '>
-              <li className='pb-[24px] border-b-[1px] border-darkgray list-[auto]'>Culinary Excellence & Ethical Sourcing</li>
-              <li className='pb-[24px] border-b-[1px] border-darkgray list-[auto]'>Environmental Stewardship</li>
-              <li className='pb-[24px] border-b-[1px] border-darkgray list-[auto]'>Employee Growth & Well-being</li>
-              <li className='pb-[24px] border-b-[1px] border-darkgray list-[auto]'>Community Impact</li>
-            </ul>
-            <h4>Together, these pillars help us align with the UN Sustainable Development Goals (SDGs) and ensure we grow responsibly while contributing to the world around us.</h4>
-          </div>
-        </div>
-      </section>
+        </section>
     </>
   )
 }

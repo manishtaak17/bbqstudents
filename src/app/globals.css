@@ -11,6 +11,7 @@
   --font-firaSans: var(--font-fira-sans);
   --font-firaSans-condensed: var(--font-fira-sans-condensed);
   --font-lato: var(--font-lato);
+  --font-montserrat: var(--font-montserrat);
   --color-darkpink: #A53349;
   --color-darkpink2: #AF364E;
   --color-brown: #683239;
@@ -38,7 +39,11 @@
   --color-gray5: #BAB9A4;
   --color-gray6: #B1B1B1;
   --color-lightblack: #1E1E1E;
-
+  /* New Colors */
+    --color-gray7: #505050;
+    --color-gray8: #999999;
+    --color-gray9: #808080;
+    --color-gray10: #9C9C9C;
 }
 
 .container {
