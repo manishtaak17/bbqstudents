@@ -64,9 +64,9 @@ const Banner = () => {
 
 
 
-            <section className='max-w-[1328px] m-auto px-5'>
+            <section className='max-w-[1328px] m-auto px-5  '>
 
-                <div className="flex gap-5 justify-between flex-wrap md:flex-nowrap">
+                <div className="flex gap-5 justify-between flex-wrap md:flex-nowrap mt-[38px]">
 
                     <div className="bg-lightcream2 w-full lg:w-2/4 max-w-[100%] lg:max-w-[632px] px-10 md:px-[30px] lg:px-[70px] py-8 md:pt-[50px] lg:pt-[80px] md:pb-[40px] lg:pb-[60px]  ">
                         <div className=" flex items-center gap-3.5">
