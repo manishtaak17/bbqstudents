@@ -1,6 +1,14 @@
+"use client"
+
+import { useState } from "react";
+import CustomModal from "../models/CustomModal";
 
 
 const Banner = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
     const Brands = () => {
         return (
@@ -40,6 +48,8 @@ const Banner = () => {
 
     return (
         <>
+
+            <button onClick={() => openModal()} >openModal</button>
             <section className='max-w-[1288px] m-auto'>
                 <div className=" bg-bgbrown pt-7 md:pt-[65px] pb-[30px] md:pb-[115px] px-7 " >
                     <div className=" max-w-[1156px] m-auto  flex gap-20 lg:gap-5 justify-between items-center flex-wrap">
@@ -86,11 +96,16 @@ const Banner = () => {
                         <p className="text-darkgray font-firaSans font-normal leading-[16.62px] md:leading-[27px] text-[12px] md:text-xl max-w-[400px]">Expanded to Mumbai @ Seawoods Mall Navi Mumbai and Andheri </p>
                         <button className="group text-bgbrown font-firaSans-condensed font-medium text-[15.96px] md:text-[25.92px] leading-[100%] rounded-[30.24px] bg-bgcream w-full max-w-[141px] md:max-w-[230px] py-2 md:py-3 flex justify-center gap-4 mt-8 md:mt-[60px]">Learn More <img className=" opacity-100 md:opacity-110 group-hover:opacity-100 transition-opacity duration-300" src="/icons/btn-icon.svg" alt="->" /> </button>
                     </div>
-                     
-                      
+
+
 
                 </div>
             </section>
+            {/* Modal */}
+            <CustomModal
+                isOpen={isModalOpen}
+                onClose={closeModal}
+            />
         </>
     )
 }
