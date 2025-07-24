@@ -9,7 +9,7 @@ const page = () => {
       {/* Banner Section */}
       <section className='bg-bgcream container pt-[64px] pb-[146px] md:pt-[100px] lg:pt-[191px] lg:pb-[233px] '>
         <div className='flex items-start justify-between gap-15 lg:gap-2 flex-col lg:flex-row'>
-          <div className='w-full max-w-full lg:max-w-[662px]'> 
+          <div className='w-full max-w-full lg:max-w-[662px]'>
             <h1 className='inline uppercase tracking-[-1%] leading-[45px] md:leading-[95px] text-[45px] md:text-[115px] font-medium font-firaSans-condensed text-brown'>Reach out to us anytime</h1>
             <div className='inline'>
               <span className='inline-block w-full max-w-[14px] h-[14px] md:max-w-[27px] md:h-[27px] bg-lightgray2 ml-3 mr-[11px] md:mr-[19px]'></span>
@@ -44,8 +44,28 @@ const page = () => {
           <div className='w-full max-w-[1054px] mx-auto '>
             <h2 className='tracking-[0%] md:tracking-[-1.2px] leading-[31px] md:leading-[51px] lg:leading-[83px] text-[26px] md:text-[40px] lg:text-[60px] font-semibold font-firaSans-condensed text-brown mb-[133px] md:mb-[103px]'>"These initiatives are not just programs, but our philosophy where career growth, dignity, and inclusion are non-negotiable. Together, we are building a workplace that is not only high-performing, but truly human."</h2>
             <div className='w-full max-w-full  flex justify-end'>
-              <h4 className='tracking-[0%] md:tracking-[-1.2px] leading-[26px] md:leading-[47px] text-[16px] md:text-[25px] lg:text-[37px] font-normal font-firaSans-condensed text-brown  w-full max-w-[248px] md:max-w-[545px]'> — Kayum R. Dhanani,<br/> MD, Barbeque Nation Hospitality Ltd.</h4>
+              <h4 className='tracking-[0%] md:tracking-[-1.2px] leading-[26px] md:leading-[47px] text-[16px] md:text-[25px] lg:text-[37px] font-normal font-firaSans-condensed text-brown  w-full max-w-[248px] md:max-w-[545px]'> — Kayum R. Dhanani,<br /> MD, Barbeque Nation Hospitality Ltd.</h4>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className='container pt-[33px] pb-[20px] md:pt-[200px] lg:pb-[120px]'>
+        <div className='flex align-top justify-between gap-[49px]'>
+          <div className='w-full max-w-[389px]'>
+            <h2 className='leading-[31px] md:leading-[46px] lg:leading-[56px] text-[26px] md:text-[36px] lg:text-[46px] font-semibold font-firaSans-condensed text-brown  md:mt-[114px]'>We operate under a clearly defined four-pillar framework:</h2>
+          </div>
+          <div className='w-full max-w-[864px]'>
+            <div className='flex items-center justify-start gap-[19px] w-full mb-[21px] lg:mb-[0px]'>
+              <span className='inline-block size-3 bg-darkpink '></span>
+              <h4 className='uppercase tracking-[-1%] leading-[50px] italic text-[24px] lg:text-[30px] font-semibold font-firaSans-condensed text-darkpink'>Sustainability Framework</h4>
+            </div>
+            <ul className='mt-[74px] mb-[56px] leading-[23px] md:leading-[75px] text-[18px] md:text-[25px] lg:text-[50px] font-normal font-firaSans-condensed text-brown '>
+              <li className='pb-[24px] border-b-[1px] border-darkgray list-[auto]'>Culinary Excellence & Ethical Sourcing</li>
+              <li className='pb-[24px] border-b-[1px] border-darkgray list-[auto]'>Environmental Stewardship</li>
+              <li className='pb-[24px] border-b-[1px] border-darkgray list-[auto]'>Employee Growth & Well-being</li>
+              <li className='pb-[24px] border-b-[1px] border-darkgray list-[auto]'>Community Impact</li>
+            </ul>
+            <h4>Together, these pillars help us align with the UN Sustainable Development Goals (SDGs) and ensure we grow responsibly while contributing to the world around us.</h4>
           </div>
         </div>
       </section>
