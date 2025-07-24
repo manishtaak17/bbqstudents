@@ -39,7 +39,7 @@ const page = () => {
       <BrandsSection />
       <EsgSection />
 
-      <section className='container '>
+      <section className='container'>
         <div className='bg-lightgray2 pt-[33px] pb-[20px] md:pt-[100px] lg:pt-[141px] lg:pb-[75px] px-6 md:px-8'>
           <div className='w-full max-w-[1054px] mx-auto '>
             <h2 className='tracking-[0%] md:tracking-[-1.2px] leading-[31px] md:leading-[51px] lg:leading-[83px] text-[26px] md:text-[40px] lg:text-[60px] font-semibold font-firaSans-condensed text-brown mb-[133px] md:mb-[103px]'>"These initiatives are not just programs, but our philosophy where career growth, dignity, and inclusion are non-negotiable. Together, we are building a workplace that is not only high-performing, but truly human."</h2>
