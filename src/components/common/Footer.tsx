@@ -80,7 +80,7 @@ const Footer = () => {
                 <div className="flex flex-col lg:flex-row gap-3 justify-between items-center mt-[68px] text-sm text-gray-500">
                     <div className="flex gap-3 mt-2">
                         {socialIcons && socialIcons?.map((icon, index) => (
-                            <Link href={icon.href} >
+                            <Link href={icon.href} key={index} >
                                 <Image
                                     key={index}
                                     src={icon.src}
