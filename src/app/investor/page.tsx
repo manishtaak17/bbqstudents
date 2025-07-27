@@ -137,7 +137,7 @@ const Page = () => {
                     </div>
                 </div>
             </section>
-            <section className=''>
+            {/* <section className=''>
                 <div className="max-w-[1262px] m-auto px-5">
                     <div className="">
                         <h5 className="text-darkpink font-firaSans-condensed font-semibold italic text-2xl md:text-3xl leading-[40px] tracking-[-1%] uppercase flex items-center gap-2 ">
@@ -176,7 +176,7 @@ const Page = () => {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
     );
 };

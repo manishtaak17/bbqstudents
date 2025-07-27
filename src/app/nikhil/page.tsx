@@ -38,6 +38,8 @@ const page = () => {
 
 
       <BrandsSection />
+
+
       <EsgSection />
 
       <section className='container'>
@@ -59,7 +61,7 @@ const page = () => {
                     <div className='flex items-center justify-start gap-[19px] w-full '>
                         <span className='inline-block size-3 bg-darkpink '></span>
                         <h4 className='uppercase tracking-[-1%] leading-[50px] italic text-[24px] lg:text-[30px] font-semibold font-firaSans-condensed text-darkpink'>Our goal</h4>
-                    </div>
+                    </div>  
                 </div>
                 <div className='w-full max-w-[864px]'>
                     <h2 className='tracking-[-0.6px] md:tracking-[0px] leading-[40px] md:leading-[50px] lg:leading-[75px] text-[26px] md:text-[36px] lg:text-[50px] font-normal font-firaSans-condensed text-brown  '>At Barbeque Nation, ESG isn’t a separate agenda — it’s the guiding force that drives us. From sustainable sourcing to inclusive hiring, and from ethical governance to community upliftment, we believe in creating long-term value that goes beyond profit.</h2>
