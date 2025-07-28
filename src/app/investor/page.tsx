@@ -1,10 +1,10 @@
 "use client"
 import CounterSection from '@/components/common/CounterSection';
 import React, { useState, useRef, useEffect } from 'react';
-import StockExchangeSection from './StockExchangeSection';
-import ResourcesSection from './ResourcesSection';
-import Slider from './Slider';
-import InvestorTabs from './InvestorTabs';
+import StockExchangeSection from './components/StockExchangeSection';
+import ResourcesSection from './components/ResourcesSection';
+import Slider from './components/Slider';
+import InvestorTabs from './components/InvestorTabs';
 
 const Page = () => {
     return (
@@ -70,7 +70,7 @@ const Page = () => {
                 </div>
             </section>
              {/* Investor Tabs */}
-            <section className="mb-[158px] mt-[148px]">
+            <section className="mb-5 md:mb-[158px] mt-[119px] md:mt-[148px]">
                 <InvestorTabs />
             </section>
 
