@@ -84,7 +84,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
         >
             {/* Modal Body */}
             <div
-                className={`pt-[119px] md:pt-[99px] pb-[190px] px-[20px] md:px-[77px] relative w-full max-w-[1200px] max-h-[100vh] bg-bgcream rounded-t-[20px] shadow-2xl overflow-hidden transition-all duration-300 ${isClosing ? 'animate-scaleOut' : 'animate-scaleIn'
+                className={`pt-[119px] md:pt-[99px]  px-[20px] md:px-[77px] relative w-full max-w-[1200px]  max-h-[100vh] bg-bgcream rounded-t-[20px] shadow-2xl overflow-hidden transition-all duration-300 ${isClosing ? 'animate-scaleOut' : 'animate-scaleIn'
                     }`}
             >
                 <button
@@ -94,7 +94,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
                     <Image src="/images/close.png" alt="clock" width={24} height={24} />
                 </button>
 
-                <div className="overflow-y-auto max-h-[90vh] hide-scrollbar ">
+                <div className="overflow-y-auto max-h-[90vh] hide-scrollbar pb-[190px]">
                     {/* Modal Content */}
                     <div className="">
                         <h2 className="uppercase md:capitalize w-full md:max-w-[810px] tracking-[0%] md:tracking-[-0.6px] leading-[45px] md:leading-[56px] text-[45px] md:text-[54px] font-medium font-firaSans-condensed text-brown">1st Indian full service CDR brand with ₹1000+ Crore annual revenues</h2>
