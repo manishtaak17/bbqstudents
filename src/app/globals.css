@@ -40,10 +40,10 @@
   --color-gray6: #B1B1B1;
   --color-lightblack: #1E1E1E;
   /* New Colors */
-    --color-gray7: #505050;
-    --color-gray8: #999999;
-    --color-gray9: #808080;
-    --color-gray10: #9C9C9C;
+  --color-gray7: #505050;
+  --color-gray8: #999999;
+  --color-gray9: #808080;
+  --color-gray10: #9C9C9C;
 }
 
 .container {
@@ -132,7 +132,8 @@ body {
     transform: scale(1.1);
   }
 }
-body{
+
+body {
   background-color: #FFF6E2;
 }
 
@@ -146,8 +147,22 @@ body{
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
