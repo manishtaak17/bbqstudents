@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import CountUp from 'react-countup';
 
-type CounterItem = {
+interface CounterItem {
     value: number;
     label: string;
     color: string;
@@ -68,7 +68,7 @@ const CounterSection: React.FC = () => {
                     <h3 className={`text-bgbrown font-firaSans-condensed font-medium text-[45px] md:text-[80px] lg:text-[100px] leading-[45px] md:leading-[100%] lg:leading-[95px] tracking-[-1%] md:tracking-[0] flex items-center`}>
                         <span className={`block size-2 md:size-5 mr-2 md:mr-2.5 ${item.color}`}></span>
                         {isVisible && (
-                            <CountUp end={item.value} duration={2} /> 
+                            <CountUp end={item.value} duration={2} />
                         )}
                         {item.value === 80 && isVisible ? '+' : ''}
                     </h3>
