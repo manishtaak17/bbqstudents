@@ -1,7 +1,57 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
 
+import { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import { Swiper as SwiperType } from "swiper";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import "swiper/css";
+import "swiper/css/navigation";
+import ServiceCard from "../cards/ServiceCard";
+
+
+const newsData = [
+    {
+        imageSrc: "toscano.png",
+        title: "1st Indian full service CDR brand with ₹1000+ Crore annual revenues",
+        date: "July 2025",
+        href: "#",
+    },
+    {
+        imageSrc: "toscano.png",
+        title: "United Foodbrands to go public in the next Quarter of 2025",
+        date: "July 2025",
+        href: "#",
+    },
+    {
+        imageSrc: "toscano.png",
+        title: "1st Indian full service CDR brand with ₹1000+ Crore annual revenues",
+        date: "July 2025",
+        href: "#",
+    },
+    {
+        imageSrc: "toscano.png",
+        title: "1st Indian full service CDR brand with ₹1000+ Crore annual revenues",
+        date: "July 2025",
+        href: "#",
+    },
+    {
+        imageSrc: "toscano.png",
+        title: "1st Indian full service CDR brand with ₹1000+ Crore annual revenues",
+        date: "July 2025",
+        href: "#",
+    },
+    {
+        imageSrc: "toscano.png",
+        title: "1st Indian full service CDR brand with ₹1000+ Crore annual revenues",
+        date: "July 2025",
+        href: "#",
+    },
+];
 
 interface CustomModalProps {
     isOpen: boolean;
@@ -11,6 +61,8 @@ interface CustomModalProps {
 const CustomModal: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
     const [isClosing, setIsClosing] = useState(false);
     const [shouldRender, setShouldRender] = useState(false);
+
+    const swiperRef = useRef<SwiperType | null>(null);
 
     // Handle opening and closing states
     useEffect(() => {
@@ -76,6 +128,8 @@ const CustomModal: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
         }
     };
 
+
+
     return (
         <div
             className={`fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 transition-all duration-300 ${isClosing ? 'animate-fadeOut' : 'animate-fadeIn'
@@ -84,7 +138,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
         >
             {/* Modal Body */}
             <div
-                className={`pt-[119px] md:pt-[99px]  px-[20px] md:px-[77px] relative w-full max-w-[1200px]  max-h-[100vh] bg-bgcream rounded-t-[20px] shadow-2xl overflow-hidden transition-all duration-300 ${isClosing ? 'animate-scaleOut' : 'animate-scaleIn'
+                className={`pt-[119px] md:pt-[99px]   relative w-full max-w-[1200px]  max-h-[100vh] bg-bgcream rounded-t-[20px] shadow-2xl overflow-hidden transition-all duration-300 ${isClosing ? 'animate-scaleOut' : 'animate-scaleIn'
                     }`}
             >
                 <button
@@ -94,9 +148,9 @@ const CustomModal: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
                     <Image src="/images/close.png" alt="clock" width={24} height={24} />
                 </button>
 
-                <div className="overflow-y-auto max-h-[90vh] hide-scrollbar pb-[190px]">
+                <div className="overflow-y-auto max-h-[90vh] hide-scrollbar ">
                     {/* Modal Content */}
-                    <div className="">
+                    <div className="px-[20px] md:px-[77px] mb-[190px]">
                         <h2 className="uppercase md:capitalize w-full md:max-w-[810px] tracking-[0%] md:tracking-[-0.6px] leading-[45px] md:leading-[56px] text-[45px] md:text-[54px] font-medium font-firaSans-condensed text-brown">1st Indian full service CDR brand with ₹1000+ Crore annual revenues</h2>
                         <div className="pt-[30px] pb-[20px] md:pt-[75px] md:pb-[37px]">
                             <div className="flex items-center justify-between gap-3">
@@ -143,6 +197,83 @@ const CustomModal: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
                                     <h5 className=" tracking-[-0.6px] md:tracking-[-1.2px] pt-[26px] md:pt-[12px] leading-[160%] md:leading-[170%] text-[14px] md:text-[21px] font-medium font-montserrat text-gray9 ">- Rahul Agrawal</h5>
                                 </div>
                                 <h5 className="pt-[22px] md:pt-[75px] leading-[150%] md:leading-[130%] text-[18px] md:text-[24px] font-normal font-firaSans-condensed text-gray10">We bring together a family of food experiences designed to spark connection, celebrate flavor, and make every meal feel meaningful, no matter where you are. We bring together a family of food experiences designed to spark connection, celebrate flavor, and make every meal feel meaningful, no matter where you are.We bring together a family of food experiences designed to spark connection, celebrate flavor, and make every meal feel meaningful, no matter where you are.</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="bg-gray2 pl-[30px] xl:pl-[104px] hidden lg:block " >
+                        <div className="" >
+                            <div className="md:pt-[77px] pt-[42px] md:pb-[84px] pb-[15px] ">
+                                {/* Header */}
+                                <div className="flex justify-between items-center mb-[38px] md:mb-[50px] mr-[40px] sm:mr-[40px] lg:mr-[128px]">
+                                    <div>
+                                        <div className="flex items-start md:gap-[22px] gap-[15px]">
+                                            <div className="md:min-w-[12px] md:h-[12px] min-w-[9px] h-[9px] bg-darkpink md:mt-3 mt-1" />
+                                            <div className="flex-col items-start" >
+                                                <p className="leading-[23px] md:leading-[40px] md:text-[30px] md:italic not-italic  text-lg font-medium font-firaSans-condensed text-darkpink2  uppercase">In the News</p>
+                                                <h2 className="leading-[35px] text-[28px] font-semibold font-firaSans-condensed text-brown ">
+                                                    Our journey through the headlines
+                                                </h2>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    {/* Navigation Buttons */}
+                                    <div className="hidden sm:flex gap-4">
+                                        <button
+                                            onClick={() => swiperRef.current?.slidePrev()}
+                                            className=" transition cursor-pointer hover:translate-x-[-5px] duration-500"
+                                        > <Image src={"/icons/leftarrow.png"} alt="arrowdown" width={20} height={20} />
+                                        </button>
+                                        <button
+                                            onClick={() => swiperRef.current?.slideNext()}
+                                            className="transition cursor-pointer hover:translate-x-[5px] duration-500"
+                                        >
+
+                                            <Image src={"/icons/rightarrow.png"} alt="right" width={20} height={20} />
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Swiper for Mobile */}
+                                <div className="hidden sm:block">
+                                    <Swiper
+                                        modules={[Navigation]}
+                                        onBeforeInit={(swiper) => {
+                                            swiperRef.current = swiper;
+                                        }}
+                                        spaceBetween={24}
+                                        slidesPerView={1.1}
+                                        breakpoints={{
+                                            640: { slidesPerView: 2 },
+                                            909: { slidesPerView: 3 },
+                                            1124: { slidesPerView: 4 },
+                                        }}
+                                    >
+                                        {newsData.map((item, idx) => (
+                                            <SwiperSlide key={idx}>
+                                                <ServiceCard {...item} />
+                                            </SwiperSlide>
+                                        ))}
+                                    </Swiper>
+                                </div>
+
+                                {/* Grid for sm and above */}
+                                <div className="sm:hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                                    {newsData.map((item, idx) => (
+                                        <ServiceCard key={idx} {...item} />
+
+                                    ))}
+                                </div>
+
+                                {/* Mobile View More */}
+                                <div className="sm:hidden mt-[34px] flex flex-row gap-[9px] items-center justify-center text-center">
+                                    <button className="leading-[23px] text-lg font-medium font-firaSans-condensed text-darkgray ">
+                                        VIEW MORE
+                                    </button>
+                                    <Image src={"/icons/arrowdown.png"} alt="arrowdown" width={15} height={7} />
+                                </div>
                             </div>
                         </div>
                     </div>
