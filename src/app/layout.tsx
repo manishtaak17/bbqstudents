@@ -42,13 +42,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${firaSansCondensed.variable} ${firaSans.variable} ${lato.variable} ${montserrat.variable}  antialiased`}
+        className={`${firaSansCondensed.variable} ${firaSans.variable} ${lato.variable} ${montserrat.variable} min-h-[100vh] antialiased`}
       >
-        <div className="relative z-30" >
+        <div className="relative z-30 bg-bgcream" >
           <Header />
           {children}
         </div>
-        <div className=" z-0" >
+        <div className="w-full relative overflow-hidden z-0 h-[81vh]"></div>
+        <div className="fixed z-0 h-[81vh] bottom-0 left-0 right-0">
           <Footer />
         </div>
       </body>
