@@ -44,7 +44,7 @@
   --color-gray8: #999999;
   --color-gray9: #808080;
   --color-gray10: #9C9C9C;
-    --color-darkgray1: #420B12;
+  --color-darkgray1: #420B12;
 }
 
 .container {
@@ -153,6 +153,34 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes scroll-up-smooth {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, -33.333%, 0);
+  }
+}
+
+@keyframes scroll-down-smooth {
+  0% {
+    transform: translate3d(0, -33.333%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.scroll-up-smooth {
+  animation: scroll-up-smooth 30s linear infinite;
+}
+
+.scroll-down-smooth {
+  animation: scroll-down-smooth 30s linear infinite;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
