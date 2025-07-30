@@ -30,7 +30,13 @@ const footerBottomLinks = ['Privacy', 'Terms', 'Legal'];
 
 const Footer = () => {
     return (
-        <footer className="w-full bg-bgcream pt-[52px] pb-[45px] md:pt-[63px] md:pb-[66px]">
+        <>
+        <footer className='container'>
+            <Image className='w-full max-w-[1300px] mx-auto'  src="/images/sectionimg.png"
+                                alt="United Foodbrands Logo"
+                                width={1200}
+                                height={335}/>
+        <div className="w-full bg-bgcream pt-[52px] pb-[45px] md:pt-[63px] md:pb-[66px]">
             <div className="max-w-[1305px] mx-auto px-[35px]">
                 <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-20">
                     {/* Left Section */}
@@ -107,8 +113,9 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> </div>
         </footer>
+        </>
     );
 };
 

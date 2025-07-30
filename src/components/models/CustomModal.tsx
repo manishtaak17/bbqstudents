@@ -138,7 +138,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
         >
             {/* Modal Body */}
             <div
-                className={`pt-[119px] md:pt-[99px]   relative w-full max-w-[1200px]  max-h-[100vh] bg-bgcream rounded-t-[20px] shadow-2xl overflow-hidden transition-all duration-300 ${isClosing ? 'animate-scaleOut' : 'animate-scaleIn'
+                className={`pt-[119px] md:pt-[99px] relative w-full max-w-[1200px]  max-h-[100vh] bg-bgcream rounded-t-[20px] shadow-2xl overflow-hidden transition-all duration-300 ${isClosing ? 'animate-scaleOut' : 'animate-scaleIn'
                     }`}
             >
                 <button
