@@ -44,6 +44,7 @@
   --color-gray8: #999999;
   --color-gray9: #808080;
   --color-gray10: #9C9C9C;
+  --color-darkgray1: #420B12;
 }
 
 .container {
@@ -180,4 +181,17 @@ body {
 
 .scroll-down-smooth {
   animation: scroll-down-smooth 30s linear infinite;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }

@@ -8,9 +8,6 @@ import Hero from "./components/Hero"
 const page = () => {
     return (
         <>
-        <section>
-            <Hero/>
-        </section>
             <section>
                 <div className="container">
                     <div className=" max-w-[748px] mr-0 ml-auto mt-[60px] md:mt-[144px]">
