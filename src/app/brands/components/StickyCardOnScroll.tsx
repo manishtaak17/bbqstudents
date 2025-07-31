@@ -11,8 +11,12 @@ const cardData = [
         image: "bbqmissionimg1.png",
         description: "Toscano brings the soul of Italy to India with artisanal dishes that honor heritage and elevate flavor. From hand-tossed pizzas and handmade ",
         color: "",
-        bgColor: "lightbrown",
-        topOffset: 50
+        bgColor: "#EFD0A0",
+        topOffset: 50,
+        visitlink: "#",
+        btntext: "DELIVERY",
+        btnlink: "https://doodles.google/",
+        btnicon: "deliveryicon.png"
     },
     {
         id: 2,
@@ -21,8 +25,12 @@ const cardData = [
         image: "Toscanorestaurant.png",
         description: "Toscano brings the soul of Italy to India with artisanal dishes that honor heritage and elevate flavor. From hand-tossed pizzas and handmade pastas to expertly curated wines, every meal is a sensory journey through Tuscany. Its elegant ambiance, immersive dining events, and warm hospitality make every visit feel authentically Italian.",
         color: "",
-        bgColor: "lightbrown",
-        topOffset: 60
+        bgColor: "#F7DDB5",
+        topOffset: 60,
+        visitlink: "#",
+        btntext: "DINE IN",
+        btnlink: "https://doodles.google/",
+        btnicon: "DI-IN.png"
     },
     {
         id: 3,
@@ -31,8 +39,12 @@ const cardData = [
         image: "saltrestaurant.png",
         description: "SALT brings Indian cuisine into the now with a modern dining experience that blends tradition and innovation. With over 150 thoughtfully curated dishes, a bold cocktail menu, and signature touches like buffet-at-the-table service, SALT is a go-to for everyday dinners and special celebrations alike.",
         color: "",
-        bgColor: "lightbrown",
-        topOffset: 70
+        bgColor: "#EFDCBE",
+        topOffset: 70,
+        visitlink: "#",
+        btntext: "DINE IN",
+        btnlink: "https://doodles.google/",
+        btnicon: "DI-IN.png"
     },
     {
         id: 4,
@@ -41,8 +53,12 @@ const cardData = [
         image: "ubqrestaurant.png",
         description: "UBQ is a modern cloud kitchen that serves up Indian thalis, bowls, and meals designed for everyday deliciousness. From comforting classics like Rajma Chawal to indulgent combos, each dish is flavorful, affordable, and made to fit into busy lives. With fresh ingredients, desk-friendly packaging, and quick delivery, UBQ blends traditional taste with modern convenience.",
         color: "",
-        bgColor: "lightbrown",
-        topOffset: 80
+        bgColor: "#F1E2CA",
+        topOffset: 80,
+        visitlink: "#",
+        btntext: "DELIVERY",
+        btnlink: "https://doodles.google/",
+        btnicon: "deliveryicon.png"
     },
     {
         id: 5,
@@ -51,8 +67,12 @@ const cardData = [
         brandimage: "dumsafarbrand.png",
         description: "Dum Safar Biryani celebrates the magic of biryani and the joy of shared meals. Crafted in the traditional dum style with long-grain rice, rich spices, and tender ingredients, each biryani comes with wholesome sides and indulgent touches. Delivered in specially designed boxes, Dum Safar offers a soulful dining experience that’s perfect for solo cravings or festive get-togethers.",
         color: "",
-        bgColor: "lightbrown",
-        topOffset: 80
+        bgColor: "#F4EAD4",
+        topOffset: 80,
+        visitlink: "#",
+        btntext: "DELIVERY",
+        btnlink: "https://doodles.google/",
+        btnicon: "deliveryicon.png"
     },
     {
         id: 6,
@@ -61,8 +81,12 @@ const cardData = [
         brandimage: "nombrand.png",
         description: "Omm Nom Nomm is a luxury French-style ice cream brand that redefines indulgence with integrity. Made in small batches using real ingredients, every scoop is rich, honest, and unapologetically indulgent. With no artificial additives, just pure flavor and smooth texture, Omm Nom Nomm is for those who believe that dessert should be as clean as it is luxurious.",
         color: "",
-        bgColor: "lightbrown",
-        topOffset: 80
+        bgColor: "#FBF0D6",
+        topOffset: 80,
+        visitlink: "#",
+        btntext: "DELIVERY",
+        btnlink: "https://doodles.google/",
+        btnicon: "deliveryicon.png"
     },
 ];
 
@@ -83,11 +107,11 @@ const StickyCardsStack = () => {
         return () => observer.disconnect();
     }, []);
 
-    const [openCardId, setOpenCardId] = useState<number | null>(null);
-
+    // const [openCardId, setOpenCardId] = useState<number | null>(null);
+    const [openCardId, setOpenCardId] = useState(cardData[0]?.id || null);
     return (
         <>
-            <div className=" hidden min-[991px]:block max-w-[1074px] mx-auto w-full">
+            <div className=" hidden min-[991px]:block max-w-[1114px] mx-auto w-full">
                 <motion.div
                     ref={containerRef}
                     className="relative flex flex-col  gap-6 mx-auto items-center px-5"

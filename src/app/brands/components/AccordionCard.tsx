@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 interface CardType {
     id: number;
@@ -11,6 +12,10 @@ interface CardType {
     image: string;
     brandimage: string;
     bgColor?: string;
+    visitlink?: string;
+    btntext?: string;
+    btnlink?: string;
+    btnicon?: string;
 }
 
 interface AccordionCardProps {
@@ -20,6 +25,7 @@ interface AccordionCardProps {
 }
 
 const AccordionCard = ({ card, isOpen, setOpenCardId }: AccordionCardProps) => {
+
     const [showFullDescription, setShowFullDescription] = useState(false);
     const descriptionRef = useRef<HTMLParagraphElement>(null);
 
@@ -51,7 +57,11 @@ const AccordionCard = ({ card, isOpen, setOpenCardId }: AccordionCardProps) => {
         : getTruncatedDescription();
 
     const handleToggle = () => {
-        setOpenCardId(isOpen ? null : card.id);
+        // setOpenCardId(isOpen ? null : card.id);
+        if (!isOpen) {
+            setOpenCardId(card.id); // always open, never close
+        }
+
     };
 
     const handleViewMoreToggle = () => {
@@ -60,7 +70,10 @@ const AccordionCard = ({ card, isOpen, setOpenCardId }: AccordionCardProps) => {
 
     return (
         <motion.div
-            className="bg-[#f5e2c9] text-[#4d2c1b] py-9 px-7 rounded-md shadow-sm mb-4"
+            style={{
+                backgroundColor: card.bgColor
+            }}
+            className={` text-[#4d2c1b] py-9 px-7 rounded-md shadow-sm `}
             whileHover={{
                 boxShadow: "0 10px 25px rgba(77, 44, 27, 0.1)"
             }}
@@ -113,34 +126,39 @@ const AccordionCard = ({ card, isOpen, setOpenCardId }: AccordionCardProps) => {
                                 />
                             </motion.div>
                             <div className="flex gap-2 items-center flex-wrap justify-end">
-                                <motion.button
-                                    className="flex flex-row gap-3 rounded-[6px] py-2 px-2.5 border items-center border-browndark/30"
-                                    transition={{ duration: 0.2 }}
-                                >
-                                    <span className="leading-[100%] text-[13px] font-medium font-inter text-bgbrown">
-                                        WEBSITE
-                                    </span>
-                                    <Image
-                                        src={"/icons/ForkKnife.png"}
-                                        width={15}
-                                        height={17}
-                                        alt="ForkKnife"
-                                    />
-                                </motion.button>
-                                <motion.button
-                                    className="flex flex-row gap-3 rounded-[6px] bg-browndark py-2 px-2.5 items-center"
-                                    transition={{ duration: 0.2 }}
-                                >
-                                    <Image
-                                        src={"/icons/deliveryicon.png"}
-                                        width={20}
-                                        height={17}
-                                        alt="DELIVERY"
-                                    />
-                                    <span className="leading-[100%] text-[13px] font-medium font-inter text-white">
-                                        DELIVERY
-                                    </span>
-                                </motion.button>
+                                <Link href={`${card.visitlink}`} >
+                                    <motion.button
+                                        className="flex flex-row gap-3 rounded-[6px] bg-white/20 py-2 px-2.5 border items-center border-browndark/30"
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        <span className="leading-[100%] text-[13px] font-medium font-inter text-bgbrown">
+                                            WEBSITE
+                                        </span>
+                                        <Image
+                                            src={"/icons/ForkKnife.png"}
+                                            width={15}
+                                            height={17}
+                                            alt="ForkKnife"
+                                        />
+                                    </motion.button>
+                                </Link>
+                                <Link href={`${card.btnlink}`} >
+                                    <motion.button
+                                        className="flex flex-row gap-3 rounded-[6px] bg-browndark py-2 px-2.5 items-center"
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        <Image
+                                            src={`/icons/${card.btnicon}`}
+                                            width={20}
+                                            height={17}
+                                            alt="DELIVERY"
+                                            className="max-w-[15px] h-[17px]"
+                                        />
+                                        <span className="leading-[100%] text-[13px] font-medium font-inter text-white">
+                                            {card.btntext}
+                                        </span>
+                                    </motion.button>
+                                </Link >
                             </div>
                         </motion.div>
 
@@ -157,7 +175,7 @@ const AccordionCard = ({ card, isOpen, setOpenCardId }: AccordionCardProps) => {
                                 alt={card.title}
                                 width={500}
                                 height={250}
-                                className="rounded-md w-full h-[193px] md:h-[400px] object-cover"
+                                className=" w-full h-[193px] md:h-[400px] object-cover"
                             />
                         </motion.div>
 
