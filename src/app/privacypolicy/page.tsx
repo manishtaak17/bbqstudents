@@ -72,7 +72,7 @@ export default function TermsAndConditions() {
                                 initial={{ opacity: 0, height: 0 }}
                                 animate={{ opacity: 1, height: "auto" }}
                                 exit={{ opacity: 0, height: 0 }}
-                                className="bg-lightcream2 md:bg-transparent px-6 md:px-0 overflow-y-auto max-h-[40vh] custom-scrollbar absolute top-full left-0 w-full leading-[17px] text-[14px] md:leading-[27px] md:text-[18px] font-normal font-firaSans text-black pb-[12px] z-10"
+                                className="bg-lightcream2 md:bg-bgcream px-6 md:px-0 overflow-y-auto max-h-[40vh] custom-scrollbar absolute top-full left-0 w-full leading-[17px] text-[14px] md:leading-[27px] md:text-[18px] font-normal font-firaSans text-black pb-[12px] z-10"
                             >
                                 {sections.map((section) => (
                                     <div
