@@ -4,6 +4,69 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 const TimelineComponent = () => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const timelineDatadesk = [
+        {
+            year: '2006',
+            title: 'Expanded to Mumbai @ Seawoods Mall',
+            subtitle: 'Navi Mumbai and Andheri'
+        },
+        {
+            year: '2010',
+            title: 'First Barbeque Nation restaurant was open in Mumbai',
+            subtitle: ''
+        },
+        {
+            year: '2011',
+            title: 'Another restaurant in the Indranagar, Bangalore',
+            subtitle: ''
+        },
+        {
+            year: '2012',
+            title: 'GSI Guest Satisfaction index was introduced',
+            subtitle: ''
+        },
+        {
+            year: '2014',
+            title: 'GSI Guest Satisfaction index was introduced',
+            subtitle: ''
+        },
+        {
+            year: '2018',
+            title: 'Expanded to Mumbai @ Seawoods Mall',
+            subtitle: 'Navi Mumbai and Andheri'
+        },
+        {
+            year: '2006',
+            title: 'Expanded to Mumbai @ Seawoods Mall',
+            subtitle: 'Navi Mumbai and Andheri'
+        },
+        {
+            year: '2010',
+            title: 'First Barbeque Nation restaurant was open in Mumbai',
+            subtitle: ''
+        },
+        {
+            year: '2011',
+            title: 'Another restaurant in the Indranagar, Bangalore',
+            subtitle: ''
+        },
+        {
+            year: '2012',
+            title: 'GSI Guest Satisfaction index was introduced',
+            subtitle: ''
+        },
+        {
+            year: '2014',
+            title: 'GSI Guest Satisfaction index was introduced',
+            subtitle: ''
+        },
+        {
+            year: '2018',
+            title: 'Expanded to Mumbai @ Seawoods Mall',
+            subtitle: 'Navi Mumbai and Andheri'
+        },
+
+    ];
     const timelineData = [
         {
             year: '2006',
@@ -34,34 +97,34 @@ const TimelineComponent = () => {
             year: '2018',
             title: 'Expanded to Mumbai @ Seawoods Mall',
             subtitle: 'Navi Mumbai and Andheri'
-        }
+        },
     ];
     // Duplicate timeline data for infinite scroll
-    const infiniteTimelineData = [...timelineData, ...timelineData, ...timelineData];
+    const infiniteTimelineData = [...timelineDatadesk, ...timelineDatadesk, ...timelineDatadesk];
     const displayedItems = isExpanded ? timelineData : timelineData.slice(0, 3);
     return (
-        <div className="bg-gradient-to-br from-orange-50 to-red-50 min-h-screen p-4 md:p-8">
-            <div className="max-w-7xl mx-auto">
+        <div className="bg-bgcream  pl-[30px] xl:pl-[144px] pr-5 pt-11 md:pt-[62px] pb-[80px] lg:pb-[259px]">
+            <div className="">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: -30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="mb-12"
+                    className=""
                 >
-                    <div className="flex items-center gap-3 mb-2">
-                        <div className="w-3 h-3 bg-orange-500 rounded-sm"></div>
-                        <h2 className="text-orange-600 font-semibold text-lg tracking-wide">
-                            OUR JOURNEY
-                        </h2>
+                    <div className="flex items-center justify-start gap-[19px] w-full ">
+                        <span className="inline-block size-3 bg-[#F47F43]"></span>
+                        <h4 className="uppercase tracking-[-1%] leading-[50px] italic text-[24px] font-semibold font-firaSans-condensed text-darkpink">
+                            our JOURNEY
+                        </h4>
                     </div>
                 </motion.div>
                 {/* Desktop Infinite Scrolling Timeline */}
                 <div className="hidden md:block overflow-hidden">
-                    <div className="relative py-20">
+                    <div className="relative pt-11 ">
                         {/* Infinite Scrolling Container */}
                         <motion.div
-                            className="flex gap-8"
+                            className="flex items-end"
                             animate={{
                                 x: [0, -2400], // Adjust based on card width and gap
                             }}
@@ -78,7 +141,7 @@ const TimelineComponent = () => {
                             {infiniteTimelineData.map((item, index) => (
                                 <motion.div
                                     key={`${item.year}-${index}`}
-                                    className="flex-shrink-0 w-80 relative"
+                                    className="relative border-r border-black/30 mr-[35px] pr-[21px] w-1/4 max-w-[335px]"
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{
@@ -87,39 +150,17 @@ const TimelineComponent = () => {
                                         type: "spring",
                                         stiffness: 100
                                     }}
-                                    whileHover={{
-                                        scale: 1.05,
-                                        y: -10,
-                                        transition: { duration: 0.3 }
-                                    }}
+
                                 >
                                     {/* Timeline Point */}
-                                    <div className="absolute left-1/2 top-0 transform -translate-x-1/2 z-10">
-                                        <motion.div
-                                            initial={{ scale: 0, rotate: -180 }}
-                                            animate={{ scale: 1, rotate: 0 }}
-                                            transition={{
-                                                delay: (index % timelineData.length) * 0.1 + 0.3,
-                                                type: "spring",
-                                                stiffness: 200
-                                            }}
-                                            className="w-5 h-5 bg-orange-500 rounded-full border-4 border-white shadow-xl"
-                                        />
-                                    </div>
-                                    {/* Connecting Line to Next Item */}
-                                    {index < infiniteTimelineData.length - 1 && (
-                                        <div className="absolute top-2.5 left-1/2 w-8 h-0.5 bg-gradient-to-r from-orange-400 to-red-400 transform translate-x-full"></div>
-                                    )}
+
                                     {/* Content Card */}
                                     <motion.div
-                                        className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 mt-8 backdrop-blur-sm"
-                                        whileHover={{
-                                            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-                                            borderColor: "#f97316"
-                                        }}
+                                        className="transition-all duration-300 mt-10"
+
                                     >
                                         <motion.h3
-                                            className="text-4xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent"
+                                            className="text-[50px] font-normal text-brown mb-[2px] font-firaSans-condensed tracking-[-1.05px] leading-[65px]"
                                             initial={{ scale: 0.8, opacity: 0 }}
                                             animate={{ scale: 1, opacity: 1 }}
                                             transition={{ delay: (index % timelineData.length) * 0.1 + 0.4 }}
@@ -127,30 +168,19 @@ const TimelineComponent = () => {
                                             {item.year}
                                         </motion.h3>
                                         <motion.p
-                                            className="text-gray-700 font-medium leading-relaxed text-base"
+                                            className="text-[24px] font-normal text-bgbrown mb-[5px] font-firaSans-condensed leading-[130%]"
                                             initial={{ opacity: 0, x: -20 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ delay: (index % timelineData.length) * 0.1 + 0.6 }}
                                         >
                                             {item.title}
                                         </motion.p>
-                                        {item.subtitle && (
-                                            <motion.p
-                                                className="text-gray-500 text-sm mt-3 italic"
-                                                initial={{ opacity: 0, x: -20 }}
-                                                animate={{ opacity: 1, x: 0 }}
-                                                transition={{ delay: (index % timelineData.length) * 0.1 + 0.8 }}
-                                            >
-                                                {item.subtitle}
-                                            </motion.p>
-                                        )}
+
                                     </motion.div>
                                 </motion.div>
                             ))}
                         </motion.div>
-                        {/* Gradient Overlays for Seamless Effect */}
-                        <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-orange-50 to-transparent z-20 pointer-events-none"></div>
-                        <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-orange-50 to-transparent z-20 pointer-events-none"></div>
+
                     </div>
                 </div>
                 {/* Mobile Timeline */}
@@ -161,16 +191,8 @@ const TimelineComponent = () => {
                         transition={{ duration: 0.8 }}
                         className="relative"
                     >
-                        {/* Vertical Timeline Line */}
-                        <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200">
-                            <motion.div
-                                initial={{ height: 0 }}
-                                animate={{ height: "100%" }}
-                                transition={{ duration: 1.5, ease: "easeInOut" }}
-                                className="bg-gradient-to-b from-orange-400 to-red-400 w-full"
-                            />
-                        </div>
-                        <div className="space-y-8">
+
+                        <div className="mt-4">
                             <AnimatePresence>
                                 {displayedItems.map((item, index) => (
                                     <motion.div
@@ -184,33 +206,15 @@ const TimelineComponent = () => {
                                             stiffness: 100,
                                             damping: 12
                                         }}
-                                        className="relative flex items-start gap-6"
+                                        className="relative flex items-start gap-6 border-b border-[#C4C4C4] mb-7.5 pb-7.5 "
                                         layout
                                     >
-                                        {/* Timeline Point */}
-                                        <div className="relative z-10">
-                                            <motion.div
-                                                initial={{ scale: 0, rotate: -180 }}
-                                                animate={{ scale: 1, rotate: 0 }}
-                                                transition={{
-                                                    delay: index * 0.2 + 0.3,
-                                                    type: "spring",
-                                                    stiffness: 200
-                                                }}
-                                                className="w-4 h-4 bg-orange-500 rounded-full border-4 border-white shadow-lg"
-                                            />
-                                        </div>
+
                                         {/* Content Card */}
                                         <motion.div
-                                            className="flex-1 bg-white rounded-lg p-6 shadow-lg border border-gray-100"
-                                            whileHover={{
-                                                scale: 1.02,
-                                                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-                                            }}
-                                            whileTap={{ scale: 0.98 }}
                                         >
                                             <motion.h3
-                                                className="text-2xl font-bold text-gray-800 mb-3"
+                                                className="text-[45px] font-medium text-bgbrown mb-[5px] font-firaSans-condensed leading-[45px]"
                                                 initial={{ x: -20, opacity: 0 }}
                                                 animate={{ x: 0, opacity: 1 }}
                                                 transition={{ delay: index * 0.2 + 0.4 }}
@@ -218,23 +222,14 @@ const TimelineComponent = () => {
                                                 {item.year}
                                             </motion.h3>
                                             <motion.p
-                                                className="text-gray-600 font-medium leading-relaxed"
+                                                className="text-[17px] font-normal text-bgbrown mb-[5px] font-firaSans leading-[24px]"
                                                 initial={{ x: -20, opacity: 0 }}
                                                 animate={{ x: 0, opacity: 1 }}
                                                 transition={{ delay: index * 0.2 + 0.6 }}
                                             >
                                                 {item.title}
                                             </motion.p>
-                                            {item.subtitle && (
-                                                <motion.p
-                                                    className="text-gray-500 text-sm mt-2"
-                                                    initial={{ x: -20, opacity: 0 }}
-                                                    animate={{ x: 0, opacity: 1 }}
-                                                    transition={{ delay: index * 0.2 + 0.8 }}
-                                                >
-                                                    {item.subtitle}
-                                                </motion.p>
-                                            )}
+
                                         </motion.div>
                                     </motion.div>
                                 ))}
@@ -245,28 +240,23 @@ const TimelineComponent = () => {
                 {/* View More Button (Mobile Only) */}
                 <div className="md:hidden">
                     <motion.div
-                        className="flex justify-center mt-12"
+                        className="flex justify-center"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1 }}
                     >
                         <motion.button
                             onClick={() => setIsExpanded(!isExpanded)}
-                            className="flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors duration-200 shadow-md"
-                            whileHover={{
-                                scale: 1.05,
-                                boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
-                            }}
-                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center gap-2 text-[18px] font-medium text-darkgray font-firaSans-condensed leading-[23px]"
                         >
-                            <span className="font-medium text-gray-700">
+                            <span className="">
                                 {isExpanded ? 'VIEW LESS' : 'VIEW MORE'}
                             </span>
                             <motion.div
                                 animate={{ rotate: isExpanded ? 180 : 0 }}
                                 transition={{ duration: 0.3 }}
                             >
-                                <ChevronDown className="w-4 h-4 text-gray-500" />
+                                <ChevronDown className="w-4 h-4 text-darkgray" />
                             </motion.div>
                         </motion.button>
                     </motion.div>
